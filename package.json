@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/kaconant/sequelize/issues"
   },
-  "homepage": "https://github.com/kaconant/sequelize#readme"
+  "homepage": "https://github.com/kaconant/sequelize#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pg": "^7.4.3"
+  }
 }
