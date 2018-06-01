@@ -5,7 +5,17 @@ const express = require('express');
 const Sequelize = require('');
 // const dotenv = require('dotenv'); -- use this is if you want to use a password in sequelize
 // dotenv.load();
-// create a file called .env (environment variable) -- set username and password
+// create a file called .env (environment variable) -- set postgress pass, user, host, dbname
+
+sequelize
+    .authenticate()
+    .then(() => {
+        console.log('successfully connected');
+    })
+    .catch(err => {
+        console.log('unable to connect: ' + err);
+    })
+
 
 const app = express();
 const sequelize = new Sequelize('postgres://postgres@localhost:5432/blog')
